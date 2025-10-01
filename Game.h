@@ -76,7 +76,7 @@ public:
                         cout << enemies[0]->getName() << " is not in range to attack." << endl;
                     }
                 } else {
-                    // fallback: if it's some other entity type, call attack anyway
+                    
                     enemies[0]->attack(player);
                     if (!player.isAlive()) {
                         cout << "Player has fallen!" << endl;
@@ -96,3 +96,4 @@ public:
     }
 
 };
+
