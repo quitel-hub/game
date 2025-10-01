@@ -64,8 +64,7 @@ public:
             if (!enemies.empty()) {
                 cout << "\n--- ENEMY TURN ---" << endl;
 
-                // --- FIX: enemy attacks ONLY if on the same map cell as player ---
-                // Try to downcast to Zombie (works also for Boss which inherits Zombie)
+                
                 Zombie* z = dynamic_cast<Zombie*>(enemies[0]);
                 if (z) {
                     if (z->getX() == player.getX() && z->getY() == player.getY()) {
@@ -95,4 +94,5 @@ public:
     ~Game() {
         for (auto e : enemies) delete e;
     }
+
 };
